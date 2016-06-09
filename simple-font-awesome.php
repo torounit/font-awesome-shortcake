@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Font-Awesome-shortcake
+ * Plugin Name: Simple Font Awesome
  * Version: 1.0.0
  * Description: PLUGIN DESCRIPTION HERE
  * Author: YOUR NAME HERE
  * Author URI: YOUR SITE HERE
  * Plugin URI: PLUGIN SITE HERE
- * Text Domain: font-awesome-shortcake
+ * Text Domain: simple-font-awesome
  * Domain Path: /languages
- * @package Font-awesome-shortcake
+ * @package simple-font-awesome
  */
 
 require 'SimpleFontAwesome/Bootstrap.php';
