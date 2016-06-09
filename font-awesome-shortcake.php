@@ -42,10 +42,8 @@ class Font_Awesome_Shortcake {
 	 * @return mixed
 	 */
 	public function mce_external_plugins( $plugin_array ) {
-		var_dump($plugin_array);
-		var_dump(plugin_dir_url( __FILE__ ) . 'assets/fa.js');
 		//プラグイン関数名＝ファイルの位置
-		$plugin_array['fa'] = plugin_dir_url( __FILE__ ) . 'assets/fa.js';
+		$plugin_array['fa'] = plugin_dir_url( __FILE__ ) . 'dist/js/tinymce-plugin.js';
 
 		return $plugin_array;
 	}
