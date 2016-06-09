@@ -4,46 +4,40 @@ import FaShortCode from '../../src/js/fa';
 import {jsdom} from 'jsdom';
 
 const window = jsdom().defaultView;
-const jquery = 'https://code.jquery.com/jquery-1.12.4.js';
+var $ = global.jQuery = require('jquery')(window);
 
 describe('FaShortCode', () => {
-	it('is method jquery depend test', (done) => {
+	let shortcode = new FaShortCode($);
 
-		jsdom.jQueryify(window, jquery, () => {
-			let shortcode = new FaShortCode(window.$);
+	describe('replace', () => {
+		it('should return <span>', () => {
 
-			describe('replace', () => {
-				it('should return <span>', () => {
+			assert.equal(
+				'<span class="fa fa-wordpress"><!-- [fa icon="wordpress"] --></span>',
+				shortcode.replace('[fa icon="wordpress"]')
+			);
 
-					assert.equal(
-						'<span class="fa fa-wordpress"><!-- [fa icon="wordpress"] --></span>',
-						shortcode.replace('[fa icon="wordpress"]')
-					);
+		});
 
-				});
+		it('should match', () => {
 
-				it('should match', () => {
+			assert.equal(
+				'<span class="fa fa-github fa-2x"><!-- [fa size="2x" icon="github"] --></span>',
+				shortcode.replace('[fa size="2x" icon="github"]')
+			);
+		});
+	});
 
-					assert.equal(
-						'<span class="fa fa-github fa-2x"><!-- [fa size="2x" icon="github"] --></span>',
-						shortcode.replace('[fa size="2x" icon="github"]')
-					);
-				});
-			});
+	describe('restore', () => {
+		it('should return shortcode', () => {
+			assert.equal(
+				'[fa icon="wordpress" size="2x"]',
+				shortcode.restore('<span class="fa fa-wordpress fa-2x"><!-- [fa icon="wordpress" size="2x"] --></span>')
+			);
+		});
+	});
 
-			describe('restore', () => {
-				it('should return shortcode', () => {
-					assert.equal(
-						'[fa icon="wordpress" size="2x"]',
-						shortcode.restore('<span class="fa fa-wordpress fa-2x"><!-- [fa icon="wordpress" size="2x"] --></span>')
-					);
-				});
-			});
-
-			done();
-		})
-	})
-})
+});
 
 
 
