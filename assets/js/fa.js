@@ -19,7 +19,7 @@ export default class {
 			object[attribute.name] =  attribute.value;
 			return object;
 		},{});
-		let template = `<span class="fa fa-{{icon}}{{#if size}} fa-{{size}}{{/if}}"><!-- ${original} --></span>`;
+		let template = `<span class="fa fa-{{icon}} {{#if size}} fa-{{size}}{{/if}} {{class}}"><!-- ${original} --></span>`;
 		return Handlebars.compile(template)(attributes);
 
 	}
