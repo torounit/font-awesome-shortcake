@@ -53,7 +53,7 @@
   		value: function renderHTML(shortcodeHTML) {
   			var icon = shortcodeHTML.attr('icon');
   			var size = shortcodeHTML.attr('size');
-  			return '<span class="fa fa-' + icon + ' fa-' + size + '" data-fa-icon="' + icon + '" data-fa-size="' + size + '"></span>';
+  			return '<span class="fa fa-' + icon + ' fa-' + size + '" data-fa-icon="' + icon + '" data-fa-size="' + size + '"><!-- fa-' + icon + ' --></span>';
   		}
   	}, {
   		key: 'restore',
