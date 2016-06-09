@@ -20,7 +20,7 @@ class Bootstrap {
 		new ShortCode();
 
 		if( defined( 'SHORTCODE_UI_VERSION') ) {
-			new ShortCake();
+			//new ShortCake();
 		}
 
 		

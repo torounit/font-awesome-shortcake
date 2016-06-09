@@ -29,7 +29,7 @@ class ShortCode {
 		), $atts );
 
 
-		return sprintf( '<span class="fa-%s fa-%s %s"></span>', $option['icon'], $option['size'], $option['class'] );
+		return sprintf( '<span class="fa fa-%s fa-%s %s"></span>', $option['icon'], $option['size'], $option['class'] );
 	}
 
 }
