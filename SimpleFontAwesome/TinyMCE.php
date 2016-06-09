@@ -41,7 +41,7 @@ class TinyMCE {
 	 */
 	public function mce_external_plugins( $plugin_array ) {
 
-		$plugin_array['fa'] = plugin_dir_url( __FILE__ ) . 'dist/js/tinymce-plugin.js';
+		$plugin_array['fa'] = plugin_dir_url( SFA_FILE ) . 'dist/js/tinymce-plugin.js';
 		return $plugin_array;
 	}
 }

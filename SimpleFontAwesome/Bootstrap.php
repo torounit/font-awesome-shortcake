@@ -18,6 +18,11 @@ class Bootstrap {
 	public function __construct() {
 		new TinyMCE();
 		new ShortCode();
+
+		if( defined( 'SHORTCODE_UI_VERSION') ) {
+			new ShortCake();
+		}
+
 		
 	}
 }
