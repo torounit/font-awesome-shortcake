@@ -1,6 +1,19 @@
+export default  {
 
-import defaultConfig from "./config.default";
-import userConfig from '../gulpconfig';
+	/**
+	 *
+	 * JavaScript.
+	 *
+	 */
+	browserify: {
+		bundleOption: {
+			cache: {}, packageCache: {}, fullPaths: false,
+			debug: true,
+			entries: './assets/js/tinymce-plugin.js',
+			extensions: ['js']
+		},
+		dest: './dist/js/',
+		filename: 'tinymce-plugin.js'
 
-
-export default Object.assign( {}, defaultConfig, userConfig );
+	}
+};

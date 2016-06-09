@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import FaShortCode from '../../src/js/fa';
+import FaShortCode from '../../assets/js/fa';
 import jq from 'jquery';
 import {jsdom} from 'jsdom';
 
