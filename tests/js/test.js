@@ -1,10 +1,10 @@
 import {assert} from 'chai';
 import FaShortCode from '../../src/js/fa';
-
+import jq from 'jquery';
 import {jsdom} from 'jsdom';
 
 const window = jsdom().defaultView;
-var $ = global.jQuery = require('jquery')(window);
+var $ = global.jQuery = jq(window);
 
 describe('FaShortCode', () => {
 	let shortcode = new FaShortCode($);

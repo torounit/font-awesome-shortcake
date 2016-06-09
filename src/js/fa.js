@@ -1,7 +1,6 @@
-//
-// import jQuery from 'jquery';
-// var $ = jQuery;
+
 import Handlebars from 'handlebars';
+
 export default class {
 
 	constructor(jQuery) {
