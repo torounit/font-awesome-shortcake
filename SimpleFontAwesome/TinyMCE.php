@@ -6,7 +6,7 @@
  * Time: 4:13
  */
 
-namespace FontAwesomeShortcake;
+namespace SimpleFontAwesome;
 
 
 class TinyMCE {

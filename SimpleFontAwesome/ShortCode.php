@@ -6,7 +6,7 @@
  * Time: 4:16
  */
 
-namespace FontAwesomeShortcake;
+namespace SimpleFontAwesome;
 
 
 class ShortCode {

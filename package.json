@@ -1,5 +1,5 @@
 {
-  "name": "font-awesome-shortcake",
+  "name": "simple-font-awesome",
   "version": "1.0.0",
   "description": "",
   "directories": {
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/torounit/font-awesome-shortcake.git"
+    "url": "git+https://github.com/torounit/simple-font-awesome.git"
   },
   "author": "Toro_Unit",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/torounit/font-awesome-shortcake/issues"
+    "url": "https://github.com/torounit/simple-font-awesome/issues"
   },
-  "homepage": "https://github.com/torounit/font-awesome-shortcake#readme",
+  "homepage": "https://github.com/torounit/simple-font-awesome#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.9.1",

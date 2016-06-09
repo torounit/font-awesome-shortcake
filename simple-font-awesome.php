@@ -11,8 +11,8 @@
  * @package Font-awesome-shortcake
  */
 
-require 'FontAwesomeShortcake/Bootstrap.php';
-require 'FontAwesomeShortcake/TinyMCE.php';
-require 'FontAwesomeShortcake/ShortCode.php';
+require 'SimpleFontAwesome/Bootstrap.php';
+require 'SimpleFontAwesome/TinyMCE.php';
+require 'SimpleFontAwesome/ShortCode.php';
 
-new \FontAwesomeShortcake\Bootstrap();
+new \SimpleFontAwesome\Bootstrap();
