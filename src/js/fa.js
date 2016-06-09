@@ -20,20 +20,15 @@ export default class {
 			object[attribute.name] =  attribute.value;
 			return object;
 		},{});
-		let template = `<span class="fa fa-{{icon}} fa-{{size}}"><!-- ${original} --></span>`;
+		let template = `<span class="fa fa-{{icon}}{{#if size}} fa-{{size}}{{/if}}"><!-- ${original} --></span>`;
 		return Handlebars.compile(template)(attributes);
 
 	}
 
 	restore( content ) {
-		return content.replace( /(?:<span( [^>]+)?>)(\s*)(?:<\/span>)/g, ( match, attr, innerText ) => {
-			console.log(innerText)
-			if ( typeof attr != 'undefined' && attr.indexOf('data-fa-shortcode') > -1 ) {
-				var shortcodeHTML = this.jQuery( match );
-				return shortcodeHTML.attr('data-fa-shortcode');
-			}
 
-			return match;
+		return content.replace( /(?:<span( [^>]+)?>)<!--\s*(\[.+\])\s*-->(?:<\/span>)/g, ( match, attr , original ) => {
+			return original;
 		});
 	}
 }

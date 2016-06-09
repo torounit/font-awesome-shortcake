@@ -16,8 +16,8 @@ describe('FaShortCode', () => {
 				it('should return <span>', () => {
 
 					assert.equal(
-						'<span class="fa fa-wordpress fa-2x"><!-- [fa icon="wordpress" size="2x"] --></span>',
-						shortcode.replace('[fa icon="wordpress" size="2x"]')
+						'<span class="fa fa-wordpress"><!-- [fa icon="wordpress"] --></span>',
+						shortcode.replace('[fa icon="wordpress"]')
 					);
 
 				});
@@ -25,8 +25,8 @@ describe('FaShortCode', () => {
 				it('should match', () => {
 
 					assert.equal(
-						'<span class="fa fa-wordpress fa-2x"><!-- [fa icon="wordpress" size="2x"] --></span>',
-						shortcode.replace('[fa icon="wordpress" size="2x"]')
+						'<span class="fa fa-github fa-2x"><!-- [fa size="2x" icon="github"] --></span>',
+						shortcode.replace('[fa size="2x" icon="github"]')
 					);
 				});
 			});
