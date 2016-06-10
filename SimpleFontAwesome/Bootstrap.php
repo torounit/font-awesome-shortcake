@@ -19,6 +19,10 @@ class Bootstrap {
 		new TinyMCE();
 		new ShortCode();
 
+		add_action('wp_enqueue_scripts', function(){
+			wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+		});
+
 		if( defined( 'SHORTCODE_UI_VERSION') ) {
 			//new ShortCake();
 		}
